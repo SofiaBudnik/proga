@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <conio.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -18,7 +17,6 @@ int main ()
 
     printf("%c",a[k-1]);
     
-    //getch();
 
     return 0;
 
