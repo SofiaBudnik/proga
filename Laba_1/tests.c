@@ -1,4 +1,4 @@
-#include "vychislen.h"
+#include "main.h"
 #include <assert.h>
 
 int test_vychislen(char a[30]) {
