@@ -10,7 +10,7 @@ int main ()
 
     printf ("182764125216343512...\n");
 
-    printf ("Enter k: %n");
+    printf ("Enter k: ");
     scanf("%d",&k);
     
     vychislen (a,k);
