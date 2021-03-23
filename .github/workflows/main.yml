@@ -1,20 +1,26 @@
-useful: buildTest test valgrind_check linter_check
-buildMain: main.c
-	gcc -o main main.c -std=c89 -lm
+name: C/C++ CI
 
-buildTest: tests.c
-	gcc -o tests -Dmain=_main main.c tests.c -std=c89 -pedantic -lm
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-test:
-	./tests
-	
-valgrind_check:
-	echo "20" > input.txt
-	valgrind ./tests < input.txt
-	
-linter_check:
-	cpp main.c
+jobs:
 
-.PHONY: clean
-clean:
-	rm -rf Laba_1/
+  build:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - uses: actions/checkout@v1
+      - name: install valgrind and cpplint
+      
+        run: |
+          sudo apt install valgrind
+          sudo pip install cpplint
+      - name: compiling and test
+        
+        run: |
+            make -C Laba_1/
