@@ -1,1 +1,1 @@
-char vychislen(char *a, int k);
+char vychislen(int k);

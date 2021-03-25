@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-//#include <conio.h>
 #include "main.h"
 char *itoa(int number, char *destination, int base) {
   int count = 0;
@@ -18,9 +17,9 @@ char *itoa(int number, char *destination, int base) {
   }
   return destination;
 }
-char vychislen(char* a, int k)
+char vychislen(int k)
 {
-   
+   char a[30];
    int i=1;
     while(k>0) {
         itoa(i*i*i, a, 10);
@@ -66,7 +65,6 @@ int main ()
 int main ()
 {
     int i,k;
-    char a[30];
     
     printf ("182764125216343512...\n");
 
@@ -74,6 +72,6 @@ int main ()
  
     scanf("%d",&k); // исходное число
  
-    printf("%c",vychislen(a,k));
+    printf("%c",vychislen(k));
     return 0;
 }
