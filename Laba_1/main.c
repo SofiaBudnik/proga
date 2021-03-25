@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <conio.h>
+//#include <conio.h>
 #include "main.h"
 char *itoa(int number, char *destination, int base) {
   int count = 0;
