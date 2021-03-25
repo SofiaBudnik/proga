@@ -1,7 +1,7 @@
 #include "main.h"
 #include <assert.h>
 
-int test_vychislen(char a[30]) {
+int test_vychislen(char* a) {
     assert(vychislen(a[4],5)==6);
 }
 
