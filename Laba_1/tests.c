@@ -1,5 +1,6 @@
 #include "main.h"
 #include <assert.h>
+#include <stdio.h>
 
 char test_vychislen() {
     assert(vychislen(5)==6);
