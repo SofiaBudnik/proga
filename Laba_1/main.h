@@ -1,1 +1,1 @@
-int vychislen(char a[30], int k);
+char vychislen(char a[30], int k);

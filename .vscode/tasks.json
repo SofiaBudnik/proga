@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "gcc",
             "args": [
-                "main.c", "-o","main.exe"
+                "main.c","-o","main.exe"
             ],
             "group": {
                 "kind": "build",
