@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 char test_vychislen() {
-    assert(vychislen(5)==6);
+    assert(vychislen(5)=='6');
 }
 
 #undef main
