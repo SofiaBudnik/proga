@@ -2,7 +2,7 @@
 #include <assert.h>
 
 int test_vychislen(char* a) {
-    assert(vychislen(a[4],5)==6);
+    assert(vychislen(&a[4],5)==6);
 }
 
 #undef main
