@@ -18,16 +18,21 @@ char *itoa(int number, char *destination, int base) {
   }
   return destination;
 }
+size_t str_len (const char *str)
+{
+    return (*str) ? str_len(++str) + 1 : 0;
+}
+
 char vychislen(int k)
 {
    char a[30];
    int i=1;
     while(k>0) {
         itoa(i*i*i, a, 10);
-        k -= strlen(a);
+        k -= str_len(a);
         i++;
     }
-     k += strlen(a);
+     k += str_len(a);
   return a[k-1];
   
 
