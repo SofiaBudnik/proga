@@ -1,12 +1,13 @@
 #include "main.h"
 #include <assert.h>
 
-int test_vychislen() {
+char test_vychislen() {
     assert(vychislen(5)==6);
 }
 
 #undef main
 int main () {
+    printf ("\n\n%c\n\n", vychislen(5));
     test_vychislen();
 }
  
