@@ -25,6 +25,6 @@ int main () {
     test_storonaC();
     test_perimeter ();
     test_squared();
-    test_vychislen();
+    
 }
  
