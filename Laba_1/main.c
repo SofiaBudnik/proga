@@ -18,7 +18,7 @@ char *itoa(int number, char *destination, int base) {
   }
   return destination;
 }
-char vychislen(char a[30], int k)
+char vychislen(char *a, int k)
 {
    
    int i=1;
