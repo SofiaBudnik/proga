@@ -10,11 +10,11 @@ int main(void) {
     char *mystr;
     mystr = malloc( sizeof(char) * 1536 );
     do {
-    printf("Для работы программы введите предложение на Английском, пожалуйста.\n");
+    printf("Enter line\n");
     gets(mystr);
     swap_min_max(mystr);
     puts(mystr);
-    printf("Для продолжения работы программы введите 0!");
+    printf("Enter 0 to continue!");
     scanf("%d",&proverka);
     fflush(stdin);
     } while (proverka==0);

@@ -7,6 +7,8 @@ int comp1 (const void * a, const void * b)
 {
   return ( *(int*)a - *(int*)b );
 }
+
+
 int main()
 {
   int **a;  
@@ -39,7 +41,7 @@ int main()
   }
   
   printf ("Unsorted:\n");
-  for (i=0; i<n; i++) {
+   for (i=0; i<n; i++) {
       d=m-1;
       for (j = 0; j < m; j++) {
         b+=a[i][j]*pow(2,d);
@@ -50,6 +52,8 @@ int main()
     printf("%d\n",y[c]);
     c++;
   }  
+
+
    qsort (y, n, sizeof(int), comp1);
   printf("\nSorted:\n");
 
