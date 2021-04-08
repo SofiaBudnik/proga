@@ -39,7 +39,7 @@ int main()
   }
   
   printf ("Unsorted:\n");
-for (i=0; i<n; i++) {
+  for (i=0; i<n; i++) {
       d=m-1;
       for (j = 0; j < m; j++) {
         b+=a[i][j]*pow(2,d);
