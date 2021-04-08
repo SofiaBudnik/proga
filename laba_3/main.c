@@ -7,9 +7,7 @@
 int main()
 {
   int **a;  
-  int i, j, n, m, temp, d,c=0, b;
-  int min=0; 
-  int x=0;
+  int i, j, n, m, temp, d, b, r, c=0, min=0, x=0;
   int *y;
   system("chcp 1251");
   system("cls");
@@ -23,8 +21,8 @@ int main()
   {
     a[i] = (int*)malloc(m * sizeof(int));
     for (j = 0; j<m; j++)  
-    { int c=rand()%2;
-      a[i][j]=c;
+    { r=rand()%2;
+      a[i][j]=r;
     }
   }
 
@@ -38,7 +36,7 @@ int main()
   }
   
   printf ("Unsorted:\n");
-    for (i=0; i<m; i++) {
+for (i=0; i<n; i++) {
       d=m-1;
       for (j = 0; j < m; j++) {
         b+=a[i][j]*pow(2,d);
@@ -46,12 +44,12 @@ int main()
       }
     y[c]=b;
     b = 0;
-    printf ("%d \n",y[c]);
+    printf("%d\n",y[c]);
     c++;
-  }
+  }  
   
    for (i=0; i<n-1; i++){
-    for (j=0; j<n-i-1; j++) {
+    for (j=0; j<m-i-1; j++) {
       if (y[j]>y[j+1]) {
         temp=y[j];
         y[j]=y[j+1];
