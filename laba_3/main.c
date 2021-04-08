@@ -3,7 +3,10 @@
 #include <malloc.h>
 #include <stdlib.h>
 #include <math.h>
-
+int comp1 (const void * a, const void * b)
+{
+  return ( *(int*)a - *(int*)b );
+}
 int main()
 {
   int **a;  
@@ -48,7 +51,7 @@ for (i=0; i<n; i++) {
     c++;
   }  
   
-   for (i=0; i<n-1; i++){
+   /*for (i=0; i<n-1; i++){
     for (j=0; j<m-i-1; j++) {
       if (y[j]>y[j+1]) {
         temp=y[j];
@@ -56,7 +59,8 @@ for (i=0; i<n; i++) {
         y[j+1]=temp;
      }
    }
-   }
+   }*/
+   qsort (y, n, sizeof(int), comp1);
   printf("\nSorted:\n");
 
   for (i=0;i<n;i++)
