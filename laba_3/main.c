@@ -56,7 +56,7 @@ int main()
   }
 
   printf ("Unsorted:\n");
-   for (i=0; i<n; i++) {
+  /* for (i=0; i<n; i++) {
       d=m-1;
       for (j = 0; j < m; j++) {
         b+=a[i][j]*pow(2,d);
@@ -66,8 +66,16 @@ int main()
     b = 0;
     printf("%d\n",y[c]);
     c++;
-  }  
-
+  }  */
+  
+  for (i=0;i<n;i++) {
+  for (j=m-1;j>-1;j--) {
+   if (a[i][j]==1)   
+   b+=pow(2,i) ;
+  }
+  y[i]=b;
+  printf("%d\n",y[i]);
+  } 
 
    qsort (y, n, sizeof(int), comp1);
   printf("\nSorted:\n");
