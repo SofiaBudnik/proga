@@ -22,6 +22,11 @@ int main()
   scanf("%d", &m);
   y=(int*)malloc(n*sizeof(int));
   a = (int**)malloc(n * sizeof(int*));
+  if (!a) {
+    printf("Incorrect value\n");
+    system("pause");
+    return 0;
+  }
   for (i = 0; i<n; i++)  
   {
     a[i] = (int*)malloc(m * sizeof(int));
