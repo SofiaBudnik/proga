@@ -9,6 +9,13 @@ int main(void) {
     int proverka;
     char *mystr;
     mystr = malloc( sizeof(char) * 1536 );
+
+    if (!mystr) {
+        printf("Incorrect value\n");
+        system("pause");
+        return 0;
+    }
+
     do {
     printf("Enter line\n");
     gets(mystr);
@@ -29,7 +36,6 @@ char* swap_min_max(char* s){
     char *p1, *p2, *e1, *e2;
     char *t, c, *p = s;
  
-    //поиск мин/макс слова
     do {
         if(*p && !(*p==' ' || *p=='.' || *p==',' || *p=='!' || *p=='?'))
         ++k;

@@ -7,10 +7,10 @@ int comp1 (const void * a, const void * b)
 {
   return ( *(int*)a - *(int*)b );
 }
-int bintodec(char *a, int n) {
-  int sum,i=0;
+int bintodec(int **a, int n) {
+  int sum,i=0,j=0;
     for (i=n-1;i>-1;i--)
-   if (a[i]=='1')   
+   if (a[i]==1)   
    return sum+=pow(2,i) ;
   }
 
@@ -28,6 +28,11 @@ int main()
   printf("Enter the number of columns: ");
   scanf("%d", &m);
   y=(int*)malloc(n*sizeof(int));
+  if (!y) {
+    printf("Incorrect value\n");
+    system("pause");
+    return 0;
+  }
   a = (int**)malloc(n * sizeof(int*));
   if (!a) {
     printf("Incorrect value\n");
@@ -50,9 +55,6 @@ int main()
       printf("%5d ", a[i][j]); 
     }
     printf("\n");
-  }
-  for (i=0; i<n; i++) {
- buffer[i]+=a[1][i];
   }
 
   printf ("Unsorted:\n");
@@ -77,7 +79,7 @@ int main()
   printf("%d\n",y[i]);
   } 
 
-   qsort (y, n, sizeof(int), comp1);
+  qsort (y, n, sizeof(int), comp1);
   printf("\nSorted:\n");
 
   for (i=0;i<n;i++)

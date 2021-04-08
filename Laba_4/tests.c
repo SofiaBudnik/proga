@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 char swap_min_max() {
-    assert(swap_min_max("fdgdf dfg d")=="d dfg fdgdf");
+    assert(swap_min_max("fdgdf dfg d")=='d');
 }
 
 #undef main
