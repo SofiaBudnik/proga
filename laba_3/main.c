@@ -1,0 +1,74 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+  int **a;  
+  int i, j, n, m, temp, d,c=0, b;
+  int min=0; 
+  int x=0;
+  int *y;
+  system("chcp 1251");
+  system("cls");
+  printf("Enter the number of lines: ");
+  scanf("%d", &n);
+  printf("Enter the number of columns: ");
+  scanf("%d", &m);
+  y=(int*)malloc(n*sizeof(int));
+  a = (int**)malloc(n * sizeof(int*));
+  for (i = 0; i<n; i++)  
+  {
+    a[i] = (int*)malloc(m * sizeof(int));
+    for (j = 0; j<m; j++)  
+    { int c=rand()%2;
+      a[i][j]=c;
+    }
+  }
+
+  for (i = 0; i < n; i++)  
+  { 
+    for (j = 0; j < m; j++)  
+    {
+      printf("%5d ", a[i][j]); 
+    }
+    printf("\n");
+  }
+  
+  printf ("Unsorted:\n");
+    for (i=0; i<m; i++) {
+      d=m-1;
+      for (j = 0; j < m; j++) {
+        b+=a[i][j]*pow(2,d);
+        d--;
+      }
+    y[c]=b;
+    b = 0;
+    printf ("%d \n",y[c]);
+    c++;
+  }
+  
+   for (i=0; i<n-1; i++){
+    for (j=0; j<n-i-1; j++) {
+      if (y[j]>y[j+1]) {
+        temp=y[j];
+        y[j]=y[j+1];
+        y[j+1]=temp;
+     }
+   }
+   }
+  printf("\nSorted:\n");
+
+  for (i=0;i<n;i++)
+    printf("%d \n",y[i]);
+
+  
+  for (i = 0; i < n; i++)  
+    free(a[i]);  
+  free(a);
+  free(y);
+  getchar(); getchar(); getchar();
+  return 0;
+}
