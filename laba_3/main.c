@@ -7,6 +7,12 @@ int comp1 (const void * a, const void * b)
 {
   return ( *(int*)a - *(int*)b );
 }
+int bintodec(char *a, int n) {
+  int sum,i=0;
+    for (i=n-1;i>-1;i--)
+   if (a[i]=='1')   
+   return sum+=pow(2,i) ;
+  }
 
 
 int main()
@@ -14,6 +20,7 @@ int main()
   int **a;  
   int i, j, n, m, temp, d, b, r, c=0, min=0, x=0;
   int *y;
+  char buffer[50];
   system("chcp 1251");
   system("cls");
   printf("Enter the number of lines: ");
@@ -44,7 +51,10 @@ int main()
     }
     printf("\n");
   }
-  
+  for (i=0; i<n; i++) {
+ buffer[i]+=a[1][i];
+  }
+
   printf ("Unsorted:\n");
    for (i=0; i<n; i++) {
       d=m-1;
