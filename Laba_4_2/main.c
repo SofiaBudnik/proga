@@ -1,68 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define n 128 
-#define max_amount_of_string 28
-#define max_string_size 100
-int myAtoi(char *str)
-{
-    int res = 0; 
-    
-    for (int i = 0; str[i] != '\0'; ++i)
-        res = res*10 + str[i] - '0';
-
-    
-    return res;
-}
 
  
 int main(void)
 {
-    FILE *ptr_file;
-    FILE *ptr_file_2;
-    char **array;
-    char buffer[n];
-    char buffer_2[n];        
+    FILE *file = fopen("test.txt", "r");
+    FILE *file2 = fopen("test2.txt", "r");
+    char array_1[30][100], array_2[30][100], srav=0;
     int i,j;
- 
-    ptr_file=fopen("data.txt","r");
-    if(ptr_file == NULL)
-       {
+
+    if(file == NULL) {
           perror("Error in opening file");
           return(-1);
-       }
-    
-    ptr_file_2=fopen("data_2.txt","r");
-    if(ptr_file_2 == NULL)
-       {
+    }
+    if(file2 == NULL) {
           perror("Error in opening file");
           return(-1);
-       }
- 
-   for (i=0; i<max_amount_of_string; i++) {
-       array[i]=(char*)malloc(max_string_size*sizeof(char));
-   }
-   // fseek(ptr_file, seek_max_word, SEEK_SET);   // устанавливаем нужное смещение
-    for (i=0; i<max_amount_of_string; i++) {
-        fgets(array[i],max_string_size,ptr_file_2);
     }
-    for (i=0; i<max_amount_of_string; i++) {
-        printf("%s",array[i]);
+    for (i=0;i<4;i++) {
+    fgets(array_1[i], 255, file);
+    printf("%s", array_1[i]);
     }
-
-    for(i = 0; i <15; i++) {    // читаем нужное слово по символам
-        printf("%c", fgetc(ptr_file));
-    }
-    for(i = 0; i <15; i++) { 
-        printf("%c", fgetc(ptr_file_2));
-    }
+    printf("\n");
+    for (i=0;i<4;i++) {
+    fgets(array_2[i], 255, file2);
     
-    if ( NULL != fgets ( buffer, 128, ptr_file_2 )){
-        printf("%s ",buffer);
+    printf("%s\n", array_2[i]);
     }
-
-    fclose(ptr_file_2);
-    fclose(ptr_file);
- 
+     while ((srav = fgetc(file2)) != EOF){
+        if (srav >= 48 && srav<=57)                              
+            printf("%c",srav);             
+    }
+    for (i=0;i<4;i++) {
+        for (j=0;j<100;j++) {
+            srav=array_2[i][j];
+            if (srav==51)
+             printf("%c\n", srav);
+        }
+    } 
     
+   
+    fclose(file);
+    fclose(file2);
+        
     return (0);
 }
