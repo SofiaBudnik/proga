@@ -1,0 +1,5 @@
+﻿  Source.cpp
+C:\Users\MSI\Desktop\Git\C-Labs\LR6\Task5.2\Source.cpp(10,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\MSI\Desktop\Git\C-Labs\LR6\Task5.2\Source.cpp(42,20): warning C4018: <: несоответствие типов со знаком и без знака
+test.obj : error LNK2005: _main уже определен в Task5.2.obj
+C:\Users\MSI\Desktop\Git\C-Labs\LR6\Task5.2\Debug\Task5.2.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более

@@ -1,0 +1,3 @@
+﻿  main_test.cpp
+Task5.1(23).obj : error LNK2005: _main уже определен в main_test.obj
+C:\Users\MSI\Desktop\Git\C-Labs\LR5\Task5.1(23)\Debug\Task5.1(23).exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
