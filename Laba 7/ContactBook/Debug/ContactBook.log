@@ -1,0 +1,18 @@
+﻿  ContactBook.cpp
+  DataBase.cpp
+  Interface.cpp
+  Outlook.cpp
+C:\Users\MSI\Desktop\Git\C-Labs\LR7(Copy)\ContactBook\Outlook.cpp(59,25): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\MSI\Desktop\Git\C-Labs\LR7(Copy)\ContactBook\Outlook.cpp(101,25): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\MSI\Desktop\Git\C-Labs\LR7(Copy)\ContactBook\Outlook.cpp(133,25): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\MSI\Desktop\Git\C-Labs\LR7(Copy)\ContactBook\Outlook.cpp(186,25): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\MSI\Desktop\Git\C-Labs\LR7(Copy)\ContactBook\Outlook.cpp(239,25): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\MSI\Desktop\Git\C-Labs\LR7(Copy)\ContactBook\Outlook.cpp(284,25): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\MSI\Desktop\Git\C-Labs\LR7(Copy)\ContactBook\Outlook.cpp(325,25): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\MSI\Desktop\Git\C-Labs\LR7(Copy)\ContactBook\Outlook.cpp(366,25): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\MSI\Desktop\Git\C-Labs\LR7(Copy)\ContactBook\Outlook.cpp(407,25): warning C4018: <=: несоответствие типов со знаком и без знака
+  Structures.cpp
+  test.cpp
+  Создание кода...
+test.obj : error LNK2005: _main уже определен в ContactBook.obj
+C:\Users\MSI\Desktop\Git\C-Labs\LR7(Copy)\ContactBook\Debug\ContactBook.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
