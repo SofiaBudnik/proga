@@ -1,14 +1,13 @@
-#include "main.h"
+#include "src.h"
 #include <assert.h>
 #include <stdio.h>
 
-char test_vychislen() {
-    assert(vychislen(5)=='6');
-}
+int test_bintodec() {
+    assert(ChangeElementsOrder(,4)==1);    
+    assert(ChangeElementsOrder(0,4)==9);
 
 #undef main
 int main () {
-    printf ("\n\n%c\n\n", vychislen(5));
     test_vychislen();
 }
  
